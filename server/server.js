@@ -8,3 +8,4 @@ const doGet = () =>
       'width=device-width, user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1"'
       )
     .setTitle("Proyecto React and App Script")
+    console.log(getDataJSON())

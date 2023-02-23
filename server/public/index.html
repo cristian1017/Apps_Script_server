@@ -27139,22 +27139,35 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "App", ()=>App);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
+var _s = $RefreshSig$();
 const App = ()=>{
+    _s();
+    const [data, setData] = (0, _react.useState)([]);
+    (0, _react.useEffect)(()=>{
+        google.script.run.withSuccessHandler((resp)=>{
+            setData(JSON.parse(resp));
+        }).getDataJSON();
+    }, []);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-            children: "Hola como estas el dia de hoy?"
-        }, void 0, false, {
-            fileName: "src/views/App.jsx",
-            lineNumber: 6,
-            columnNumber: 7
-        }, undefined)
-    }, void 0, false, {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                children: "Hola como estas el dia de hoy ?"
+            }, void 0, false, {
+                fileName: "src/views/App.jsx",
+                lineNumber: 17,
+                columnNumber: 7
+            }, undefined),
+            data.map((e)=>{
+                console.log(e);
+            })
+        ]
+    }, void 0, true, {
         fileName: "src/views/App.jsx",
-        lineNumber: 5,
+        lineNumber: 16,
         columnNumber: 5
     }, undefined);
 };
+_s(App, "IEMTtLVFIuToo7X/raQbJAxzNQU=");
 _c = App;
 var _c;
 $RefreshReg$(_c, "App");
